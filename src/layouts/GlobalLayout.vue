@@ -4,15 +4,15 @@
       <sider-menu :theme="theme" :menuData="menuData" :collapsed="false" :collapsible="false" @menuSelect="onMenuSelect"/>
     </drawer>
     <sider-menu :theme="theme" v-else-if="layout === 'side'" :menuData="menuData" :collapsed="collapsed" :collapsible="true" />
-    <drawer :open-drawer="showSetting" placement="right"  @change="onSettingDrawerChange">
+    <!-- <drawer :open-drawer="showSetting" placement="right"  @change="onSettingDrawerChange">
       <div class="setting" slot="handler">
         <a-icon :type="showSetting ? 'close' : 'setting'" />
       </div>
       <setting />
-    </drawer>
+    </drawer> -->
     <a-layout>
       <global-header :menuData="menuData" :collapsed="collapsed" @toggleCollapse="toggleCollapse"/>
-      <a-layout-content :style="{minHeight: minHeight, margin: '24px 24px 0'}">
+      <a-layout-content :style="{minHeight: minHeight, margin: '24px 24px 0', marginTop: '88px'}">
         <slot></slot>
       </a-layout-content>
       <a-layout-footer style="padding: 0px">

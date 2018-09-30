@@ -3,10 +3,10 @@
     <div class="content">
       <div class="top">
         <div class="header">
-          <img alt="logo" class="logo" src="static/img/vue-antd-logo.png" />
+          <img alt="logo" class="logo" src="static/img/logo_02.png" />
           <span class="title">{{systemName}}</span>
         </div>
-        <div class="desc">Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+        <div class="desc">专业港美股多煤体信息服务平台</div>
       </div>
       <div class="login">
         <a-form @submit="onSubmit" :autoFormCreate="(form) => this.form = form">
@@ -57,13 +57,13 @@
           <a-form-item>
             <a-button :loading="logging" style="width: 100%;margin-top: 24px" size="large" htmlType="submit" type="primary">登录</a-button>
           </a-form-item>
-          <div>
+          <!-- <div>
             其他登录方式
             <a-icon class="icon" type="alipay-circle" />
             <a-icon class="icon" type="taobao-circle" />
             <a-icon class="icon" type="weibo-circle" />
             <router-link style="float: right" to="/dashboard/workplace" >注册账户</router-link>
-          </div>
+          </div> -->
         </a-form>
       </div>
     </div>
@@ -108,7 +108,7 @@ export default {
             const result = res.data
             if (result.code >= 0) {
               const user = result.data.user
-              this.$router.push('/dashboard/workplace')
+              this.$router.push('/home')
               this.$store.commit('account/setuser', user)
               this.$message.success(result.message, 3)
             } else {
